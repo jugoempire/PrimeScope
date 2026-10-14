@@ -1,0 +1,2 @@
+# PrimeScope
+A blog website 
