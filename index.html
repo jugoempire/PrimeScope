@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PrimeScope brings you useful articles on health, business, technology, education, jobs, news and lifestyle.">
+    <title>PrimeScope — See More. Know More.</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #172033;
+            background: #f5f7fb;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #102b50;
+            color: white;
+            padding: 20px;
+        }
+
+        .header-inner {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #55d6be;
+        }
+
+        .tagline {
+            font-size: 12px;
+            color: #d9e7f7;
+        }
+
+        nav {
+            background: white;
+            padding: 12px 15px;
+            border-bottom: 1px solid #e1e7ef;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #17385f;
+            text-decoration: none;
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #102b50, #176b87);
+            color: white;
+            padding: 35px 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            line-height: 1.25;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            margin-bottom: 20px;
+            color: #e4f1fa;
+        }
+
+        .search {
+            display: flex;
+            gap: 8px;
+            max-width: 500px;
+        }
+
+        .search input {
+            min-width: 0;
+            flex: 1;
+            padding: 13px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .search button {
+            padding: 12px 16px;
+            background: #55d6be;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .category {
+            background: white;
+            padding: 16px 10px;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid #e5eaf1;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .articles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .article {
+            background: white;
+            padding: 20px;
+            border-radius: 9px;
+            border: 1px solid #e5eaf1;
+        }
+
+        .article .label {
+            display: inline-block;
+            color: #087e70;
+            background: #e0f7f1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .article h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .article p {
+            color: #5e6878;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .article a {
+            color: #145c9e;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .notice {
+            background: #fff8df;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #66521a;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 25px 15px;
+            background: #102b50;
+            color: white;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .articles {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+        <div>
+            <div class="logo">Prime<span>Scope</span></div>
+            <div class="tagline">SEE MORE. KNOW MORE.</div>
+        </div>
+        <div>Knowledge for everyday life</div>
+    </div>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#latest">Latest Articles</a>
+    <a href="#about">About Us</a>
+</nav>
+
+<main class="container">
+
+    <section class="hero">
+        <h1>Discover More. Understand Better.</h1>
+        <p>
+            Explore useful information about health, money, technology,
+            education, jobs, news and everyday life.
+        </p>
+
+        <form class="search" id="searchForm">
+            <input id="searchInput" type="search"
+                placeholder="Search articles..." aria-label="Search articles">
+            <button type="submit">Search</button>
+        </form>
+    </section>
+
+    <section id="categories">
+        <h2 class="section-title">Explore Categories</h2>
+
+        <div class="categories">
+            <div class="category">Health</div>
+            <div class="category">Business &amp; Money</div>
+            <div class="category">Technology</div>
+            <div class="category">Education &amp; Jobs</div>
+            <div class="category">News &amp; Trends</div>
+            <div class="category">Lifestyle</div>
+            <div class="category">Relationships</div>
+            <div class="category">Online Business</div>
+        </div>
+    </section>
+
+    <section id="latest">
+        <h2 class="section-title">Latest Articles</h2>
+
+        <div class="articles" id="articleList">
+            <article class="article">
+                <span class="label">Health</span>
+                <h3>Health and Wellness</h3>
+                <p>Practical information to help you learn more about healthy living.</p>
+                <a href="#about">Explore more</a>
+            </article>
+
+            <article class="article">
+                <span class="label">Business &amp; Money</span>
+                <h3>Business Ideas and Money</h3>
+                <p>Discover business concepts, financial knowledge and opportunities.</p>
+                <a href="#about">Explore more</a>
+            </article>
+
+            <article class="article">
+                <span class="label">Technology</span>
+                <h3>Technology and Digital Life</h3>
+                <p>Learn about digital tools, technology and online developments.</p>
+                <a href="#about">Explore more</a>
+            </article>
+        </div>
+
+        <p id="noResults" hidden>No matching articles found.</p>
+    </section>
+
+    <section class="notice">
+        <strong>Coming soon:</strong>
+        We're building a growing library of helpful articles for readers in
+        Nigeria and around the world.
+    </section>
+
+    <section id="about" style="margin-top:30px;">
+        <h2 class="section-title">About PrimeScope</h2>
+        <p>
+            PrimeScope aims to make useful knowledge easier to discover,
+            understand and apply in everyday life.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> PrimeScope. All rights reserved.</p>
+    <p>See More. Know More.</p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+    const searchForm = document.getElementById("searchForm");
+    const searchInput = document.getElementById("searchInput");
+    const articles = Array.from(
+        document.querySelectorAll("#articleList .article")
+    );
+    const noResults = document.getElementById("noResults");
+
+    searchForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const query = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+
+        articles.forEach(function(article) {
+            const matches = article.textContent
+                .toLowerCase().includes(query);
+
+            article.hidden = !matches;
+
+            if (matches) {
+                visibleCount++;
+            }
+        });
+
+        noResults.hidden = visibleCount > 0;
+    });
+</script>
+
+</body>
+  </html>
